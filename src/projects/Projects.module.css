@@ -1,16 +1,14 @@
 .projectsBlock {
-    min-height: 100vh;
     background-color: #dbd5ec;
 }
 
 .projectsContainer {
     flex-direction: column;
-    justify-content: flex-start;
-    flex-wrap: nowrap;
 }
 
 .title {
     background-color: darkgrey;
+    margin: 10px 0;
 }
 
 .projects {

@@ -12,7 +12,7 @@ function Footer() {
                     <div className={style.footerSocial}></div>
                     <div className={style.footerSocial}></div>
                 </div>
-                <div className={style.link}>
+                <div className={style.copyright}>
                     © 2022 All rights reserved
                 </div>
             </div>
