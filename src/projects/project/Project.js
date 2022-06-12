@@ -5,7 +5,7 @@ function Project(props) {
         <div className={style.project}>
             <div className={style.imgContainer}>
                 <a href="" className={style.link}>
-                    Посмотреть
+                    Watch
                 </a>
             </div>
             <div className={style.descriptionContainer}>
