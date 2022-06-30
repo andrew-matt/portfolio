@@ -1,20 +1,35 @@
-import style from './Projects.module.css';
 import styleContainer from "../common/styles/Container.module.css";
+import style from './Projects.module.css';
 import Project from "./project/Project";
+import socialNetwork from '../common/images/social-network.png'
+import todoList from '../common/images/todolist.jpg'
 
 function Projects() {
+
+    const socialNetworkImage = {
+        backgroundImage: `url(${socialNetwork})`,
+    }
+
+    const todoListImage = {
+        backgroundImage: `url(${todoList})`
+    }
+
     return (
         <div className={style.projectsBlock}>
             <div className={`${styleContainer.container} ${style.projectsContainer}`}>
-                <h2 className={style.title}>Projects</h2>
+                <div className={style.title}>
+                    <h2>Projects</h2>
+                </div>
                 <div className={style.projects}>
                     <Project
-                        title={"Project name"}
-                        description={"Project description"}
+                        title={"SOCIAL NETWORK"}
+                        description={"Lorem ipsum dolor sit amet, consectetur adipisicing elit"}
+                        style={socialNetworkImage}
                     />
                     <Project
-                        title={"Project name"}
-                        description={"Project description"}
+                        title={"TODOLIST"}
+                        description={"Alias dignissimos dolor eos ex incidunt itaque iusto magnam maiores nostrum numquam possimus quam rerum, sit ut voluptatem. Consequatur cum odit recusandae."}
+                        style={todoListImage}
                     />
                 </div>
             </div>

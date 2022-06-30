@@ -1,5 +1,6 @@
 .projectsBlock {
-    background-color: #dbd5ec;
+    height: 1800px;
+    background-color: #212428;
 }
 
 .projectsContainer {
@@ -7,14 +8,40 @@
 }
 
 .title {
-    background-color: darkgrey;
-    margin: 10px 0;
+    margin: 0 0 30px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    color: #c4cfde;
+    font-size: 38px;
+    position: relative;
+}
+
+.title h2 {
+    margin: 0;
+}
+
+.title::after {
+    position: absolute;
+    background-color: #c4cfde;
+    width: 55px;
+    height: 1px;
+    content: '';
+    left: 50%;
+    transform: translate(-50%, 50%);
+    bottom: -15px;
 }
 
 .projects {
+    padding: 40px;
     border: 1px solid;
     width: 100%;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     flex-wrap: wrap;
+}
+
+@media screen and (max-width: 629px) {
+    .projects {
+        justify-content: center;
+    }
 }
