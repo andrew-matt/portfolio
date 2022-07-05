@@ -1,4 +1,4 @@
-import styleContainer from "../common/styles/Container.module.css";
+import styleContainer from "../common/styles/sass/Container.module.scss";
 import style from './Projects.module.scss';
 import Project from "./project/Project";
 import socialNetwork from '../common/images/Social-network.jpg'

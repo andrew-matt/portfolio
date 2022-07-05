@@ -1,0 +1,29 @@
+@import '../common/styles/sass/variables';
+
+.nav {
+  font-family: $secondaryFont;
+  font-size: 13px;
+  font-weight: 400;
+  //border: 1px solid;
+  display: flex;
+  margin-right: 100px;
+
+  &:hover {
+    a {
+      opacity: .5;
+    }
+  }
+
+  a {
+    color: $textColor;
+    text-decoration: none;
+    margin: 10px 5px;
+    padding: 5px 10px;
+    transition: $transition;
+
+    &:hover {
+      opacity: 1;
+      color: white;
+    }
+  }
+}

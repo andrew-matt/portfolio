@@ -1,5 +1,5 @@
 import style from './Skills.module.css';
-import styleContainer from "../common/styles/Container.module.css";
+import styleContainer from "../common/styles/sass/Container.module.scss";
 import Skill from "./skill/Skill";
 
 function Skills() {

@@ -1,4 +1,5 @@
 @import '../../common/styles/sass/variables';
+@import '../../common/styles/sass/mixins';
 
 .link {
   cursor: pointer;
@@ -52,19 +53,16 @@
       .title {
         padding-bottom: 10px;
         color: $primaryColor;
-        font-size: 12px;
-        font-weight: 500;
+        @include text($primaryFont, 12px, 500);
         letter-spacing: 1px;
-        font-family: $secondaryFont;
       }
 
       .description {
         width: fit-content;
         color: $textColor;
         transition: $transition;
-        font-size: 23px;
-        font-weight: 600;
-        font-family: $primaryFont;
+        @include text($secondaryFont, 23px, 600);
+
 
         &:hover {
           color: $primaryColor;
