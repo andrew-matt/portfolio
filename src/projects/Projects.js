@@ -1,8 +1,9 @@
 import styleContainer from "../common/styles/Container.module.css";
-import style from './Projects.module.css';
+import style from './Projects.module.scss';
 import Project from "./project/Project";
-import socialNetwork from '../common/images/social-network.png'
-import todoList from '../common/images/todolist.jpg'
+import socialNetwork from '../common/images/Social-network.jpg'
+import todoList from '../common/images/Todolist.jpg'
+import {Title} from "../common/components/title/Title";
 
 function Projects() {
 
@@ -17,9 +18,7 @@ function Projects() {
     return (
         <div className={style.projectsBlock}>
             <div className={`${styleContainer.container} ${style.projectsContainer}`}>
-                <div className={style.title}>
-                    <h2>Projects</h2>
-                </div>
+                <Title title={'Projects'}/>
                 <div className={style.projects}>
                     <Project
                         title={"SOCIAL NETWORK"}
@@ -28,7 +27,7 @@ function Projects() {
                     />
                     <Project
                         title={"TODOLIST"}
-                        description={"Alias dignissimos dolor eos ex incidunt itaque iusto magnam maiores nostrum numquam possimus quam rerum, sit ut voluptatem. Consequatur cum odit recusandae."}
+                        description={"Alias dignissimos dolor eos ex incidunt itaque iusto magnam maiores nostrum numquam possimus quam rerum."}
                         style={todoListImage}
                     />
                 </div>
