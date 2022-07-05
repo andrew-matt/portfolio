@@ -1,0 +1,36 @@
+@import '../common/styles/sass/variables';
+
+.mainBlock {
+  height: 100vh;
+
+  .greetingBlock {
+    width: 500px;
+    //background-color: #17191d;
+    h1 {
+      font-size: 60px;
+      font-family: $fontSecondary;
+      color: white;
+      margin-bottom: 22px;
+
+      span:last-child {
+        color: $colorPrimary;
+      }
+    }
+
+    p {
+      width: 562px;
+      font-size: 16px;
+      opacity: .9;
+      line-height: 30px;
+    }
+  }
+
+  .photoContainer {
+    width: 470px;
+    height: 643px;
+    background-color: #1f2125;
+  }
+}
+
+
+
