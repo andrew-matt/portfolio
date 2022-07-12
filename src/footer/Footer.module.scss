@@ -1,0 +1,15 @@
+.footerBlock {
+
+  .footerContainer {
+    flex-direction: column;
+
+    .title {
+      margin-bottom: 10px;
+    }
+
+    .copyright {
+      padding: 5px 10px;
+      margin-top: 10px;
+    }
+  }
+}

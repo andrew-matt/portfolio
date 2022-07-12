@@ -10,7 +10,7 @@
       border-radius: 10px;
       box-shadow: 10px 10px 19px #1c1e22, -10px -10px 19px #262a2e;
       width: 715px;
-      height: 802px;
+      height: auto;
       padding: 30px;
       display: flex;
       flex-direction: column;
@@ -50,6 +50,7 @@
         resize: none;
         color: #c4cfde;
         transition: $transition;
+        margin-bottom: 20px;
 
         &:focus {
           outline: 2px solid #ff014f;
@@ -57,18 +58,26 @@
           color: #e4e6ea;
         }
       }
-    }
 
-    a {
-      text-decoration: none;
-      color: black;
-      font-weight: bold;
-    }
+      .buttonContainer {
 
-    .link {
-      background-color: grey;
-      padding: 10px 25px;
-      margin: 10px 0;
+        .button {
+          cursor: pointer;
+          background: linear-gradient(145deg, #1e2024, #23272b);
+          border: 0;
+          border-radius: 6px;
+          box-shadow: 10px 10px 19px #1c1e22, -10px -10px 19px #262a2e;
+          font-size: 14px;
+          font-weight: 500;
+          color: #ff014f;
+          padding: 15px 35px;
+          transition: 0.4s;
+
+          &:hover {
+            background: linear-gradient(to right bottom, #212428, #16181c);
+          }
+        }
+      }
     }
   }
 }

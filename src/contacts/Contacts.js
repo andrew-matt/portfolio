@@ -10,11 +10,13 @@ function Contacts() {
                 <form className={style.contactFormWrapper} spellCheck={"false"}>
                     <input type="text" className={style.input}/>
                     <input type="text" className={style.input}/>
-                    <textarea cols="30" rows="10" className={style.textarea}></textarea>
+                    <textarea cols="30" rows="10" className={style.textarea}/>
+                    <div className={style.buttonContainer}>
+                        <button className={style.button}>
+                            <span>SEND MESSAGE</span>
+                        </button>
+                    </div>
                 </form>
-                <a href="" className={style.link}>
-                    Send message
-                </a>
             </div>
         </div>
     )
