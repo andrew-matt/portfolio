@@ -1,24 +1,37 @@
-import style from './Skills.module.css';
+import style from './Skills.module.scss';
 import styleContainer from "../common/styles/sass/Container.module.scss";
 import Skill from "./skill/Skill";
+import {Title} from "../common/components/title/Title";
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
+import {faHtml5, faJsSquare, faReact} from "@fortawesome/free-brands-svg-icons";
 
 function Skills() {
+
+    const reactDescription = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet hic labore nemo obcaecati quam qui voluptatum!"
+
+    const javascriptDescription = "Mauris pharetra et ultrices neque ornare. Ipsum suspendisse ultrices gravida dictum fusce ut placerat orci nulla."
+
+    const htmlDescription = "Magna fermentum iaculis eu non diam phasellus vestibulum lorem sed."
+
     return (
         <div className={style.skillsBlock}>
             <div className={`${styleContainer.container} ${style.skillsContainer}`}>
-                <h2 className={style.title}>Skills</h2>
+                <Title title={'Skills'}/>
                 <div className={style.skills}>
                     <Skill
-                        title={"HTML&CSS"}
-                        description={"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet hic labore nemo obcaecati quam qui voluptatum! Amet animi, consequuntur distinctio exercitationem facere facilis itaque minus quaerat, rerum sunt veritatis voluptatem!"}
+                        title={"React"}
+                        description={reactDescription}
+                        icon={<FontAwesomeIcon icon={faReact} color={'#ff014f'} size={'3x'}/>}
                     />
                     <Skill
                         title={"JS"}
-                        description={"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet hic labore nemo obcaecati quam qui voluptatum! Amet animi, consequuntur distinctio exercitationem facere facilis itaque minus quaerat, rerum sunt veritatis voluptatem!"}
+                        description={javascriptDescription}
+                        icon={<FontAwesomeIcon icon={faJsSquare} color={'#ff014f'} size={'3x'}/>}
                     />
                     <Skill
-                        title={"React"}
-                        description={"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet hic labore nemo obcaecati quam qui voluptatum! Amet animi, consequuntur distinctio exercitationem facere facilis itaque minus quaerat, rerum sunt veritatis voluptatem!"}
+                        title={"HTML & CSS"}
+                        description={htmlDescription}
+                        icon={<FontAwesomeIcon icon={faHtml5} color={'#ff014f'} size={'3x'}/>}
                     />
                 </div>
             </div>

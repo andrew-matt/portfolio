@@ -1,7 +1,8 @@
 @import '../common/styles/sass/variables';
 
 .mainBlock {
-  height: 100vh;
+  min-height: 100vh;
+  //background-color: white;
 
   .greetingBlock {
     width: 500px;
@@ -29,6 +30,17 @@
     width: 470px;
     height: 643px;
     background-color: #1f2125;
+  }
+
+  .bottomLineContainer {
+    display: flex;
+    justify-content: center;
+
+    .bottomLine {
+      width: 80rem;
+      height: 1px;
+      background-color: #121415;
+    }
   }
 }
 

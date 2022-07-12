@@ -1,0 +1,75 @@
+@import './src/common/styles/sass/variables';
+
+.contactsBlock {
+  .contactsContainer {
+    flex-direction: column;
+
+    .contactFormWrapper {
+      //border: 1px solid;
+      background-color: $elementBgColor;
+      border-radius: 10px;
+      box-shadow: 10px 10px 19px #1c1e22, -10px -10px 19px #262a2e;
+      width: 715px;
+      height: 802px;
+      padding: 30px;
+      display: flex;
+      flex-direction: column;
+
+      .input {
+        padding: 0 15px;
+        background-color: #191b1e;
+        border: 2px solid #191b1e;
+        box-shadow: 1px 4px 2px -3px rgba(0, 0, 0, .7) inset, -1px -3px 3px -2px hsla(0, 0%, 100%, .2) inset;
+        outline: 2px solid #191b1e;
+        border-radius: 6px;
+        font-size: 14px;
+        letter-spacing: 1px;
+        height: 55px;
+        margin-bottom: 20px;
+        color: #c4cfde;
+        transition: $transition;
+
+        &:focus {
+          outline: 2px solid #ff014f;
+          box-shadow: none;
+          color: #e4e6ea;
+        }
+      }
+
+      .textarea {
+        padding: 10px 15px;
+        background-color: #191b1e;
+        border: 2px solid #191b1e;
+        box-shadow: 1px 4px 2px -3px rgba(0, 0, 0, .7) inset, -1px -3px 3px -2px hsla(0, 0%, 100%, .2) inset;
+        outline: 2px solid #191b1e;
+        border-radius: 6px;
+        font-size: 14px;
+        letter-spacing: 1px;
+        line-height: 18px;
+        min-height: 235px;
+        resize: none;
+        color: #c4cfde;
+        transition: $transition;
+
+        &:focus {
+          outline: 2px solid #ff014f;
+          box-shadow: none;
+          color: #e4e6ea;
+        }
+      }
+    }
+
+    a {
+      text-decoration: none;
+      color: black;
+      font-weight: bold;
+    }
+
+    .link {
+      background-color: grey;
+      padding: 10px 25px;
+      margin: 10px 0;
+    }
+  }
+}
+

@@ -6,16 +6,16 @@
   font-size: 38px;
   position: relative;
 
-  &::after {
-    position: absolute;
-    background-color: #c4cfde;
-    width: 55px;
-    height: 1px;
-    content: '';
-    left: 50%;
-    transform: translate(-50%, 50%);
-    bottom: -15px;
-  }
+  //&::after {
+  //  position: absolute;
+  //  background-color: #c4cfde;
+  //  width: 55px;
+  //  height: 1px;
+  //  content: '';
+  //  left: 50%;
+  //  transform: translate(-50%, 50%);
+  //  bottom: -15px;
+  //}
 
   h2 {
     margin: 0;

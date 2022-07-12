@@ -7,7 +7,7 @@
   .projectContainer {
     width: 450px;
     min-height: 417px;
-    background-color: #1f2125;
+    background-color: $elementBgColor;
     display: flex;
     flex-direction: column;
     padding: 30px;
@@ -15,14 +15,16 @@
     transition: $transition;
 
     &:hover {
-      background-color: #17191d;
-      transition: $transition;
+      background-color: $elementHoveredBgColor;
+
+      div.imageContainer {
+        transform: scale(1.1);
+      }
     }
 
     .imgPlus {
       display: inline-block;
       overflow: hidden;
-      transition: $transition;
       border-radius: 10px;
 
       .imageContainer {
@@ -36,15 +38,7 @@
         background-position: center;
         border-radius: 10px;
         transition: $transition;
-
-        &:hover {
-          transform: scale(1.1);
-          transition: $transition;
-
-        }
-
       }
-
     }
 
     .descriptionContainer {
@@ -66,7 +60,6 @@
 
         &:hover {
           color: $colorPrimary;
-          transition: $transition;
         }
       }
     }
