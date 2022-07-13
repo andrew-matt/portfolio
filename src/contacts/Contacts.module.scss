@@ -38,6 +38,9 @@
         padding: 20px;
         margin-top: 25px;
       }
+      @media screen and (max-width: 768px) {
+        width: 90%;
+      }
 
       .input {
         padding: 0 15px;
