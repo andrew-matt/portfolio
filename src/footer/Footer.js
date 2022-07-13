@@ -1,7 +1,7 @@
 import style from './Footer.module.scss'
 import styleContainer from "../common/styles/sass/Container.module.scss";
 
-function Footer() {
+export const Footer = () => {
     return (
         <div className={style.footerBlock}>
             <div className={`${styleContainer.container} ${style.footerContainer}`}>
@@ -13,5 +13,3 @@ function Footer() {
         </div>
     )
 }
-
-export default Footer

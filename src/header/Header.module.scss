@@ -1,6 +1,11 @@
 @import '../common/styles/sass/variables';
 
 .header {
+    position: absolute;
+    top: 0;
+    transition: .3s;
+    width: 100%;
+    z-index: 999;
     height: 122px;
     display: flex;
     justify-content: flex-end;

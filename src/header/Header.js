@@ -1,12 +1,10 @@
 import style from './Header.module.scss';
 import {Nav} from "../nav/Nav";
 
-function Header() {
+export const Header = () => {
     return (
-        <div className={style.header}>
+        <header className={style.header}>
             <Nav/>
-        </div>
+        </header>
     );
 }
-
-export default Header;

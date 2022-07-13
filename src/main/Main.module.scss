@@ -2,11 +2,15 @@
 
 .mainBlock {
   min-height: 100vh;
-  //background-color: white;
+  //border: 1px solid red;
+  position: relative;
+  padding: 150px 0 100px 0;
+  display: flex;
+  align-items: flex-end;
 
   .greetingBlock {
     width: 500px;
-    //background-color: #17191d;
+
     h1 {
       font-size: 60px;
       font-family: $fontSecondary;
@@ -30,17 +34,30 @@
     width: 470px;
     height: 643px;
     background-color: #1f2125;
+    box-shadow: 10px 10px 19px #1c1e22, -10px -10px 19px #262a2e;
   }
 
-  .bottomLineContainer {
-    display: flex;
-    justify-content: center;
+  //
+  //.bottomLineContainer {
+  //  display: flex;
+  //  justify-content: center;
+  //
+  //  .bottomLine {
+  //    width: 80rem;
+  //    height: 1px;
+  //    background-color: #121415;
+  //  }
+  //}
 
-    .bottomLine {
-      width: 80rem;
-      height: 1px;
-      background-color: #121415;
-    }
+  &::after {
+    position: absolute;
+    width: 80rem;
+    height: 1px;
+    background-color: #121415;
+    bottom: 0;
+    content: '';
+    left: 50%;
+    transform: translate(-50%, 50%);
   }
 }
 

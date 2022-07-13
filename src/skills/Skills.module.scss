@@ -1,13 +1,30 @@
 .skillsBlock {
+  //border: 3px solid red;
+  padding: 100px 0 100px 0;
+  position: relative;
+
   .skillsContainer {
+    //border: 1px solid;
     flex-direction: column;
 
-    .skills {
+    .skillsWrapper {
       //border: 1px solid;
       width: 100%;
       display: flex;
-      justify-content: space-around;
+      justify-content: center;
+      //align-items: start;
       flex-wrap: wrap;
     }
+  }
+
+  &::after {
+    position: absolute;
+    width: 80rem;
+    height: 1px;
+    background-color: #121415;
+    bottom: 0;
+    content: '';
+    left: 50%;
+    transform: translate(-50%, 50%);
   }
 }

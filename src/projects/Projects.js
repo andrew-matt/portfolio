@@ -5,7 +5,7 @@ import socialNetwork from '../common/images/Social-network.jpg'
 import todoList from '../common/images/Todolist.jpg'
 import {Title} from "../common/components/title/Title";
 
-function Projects() {
+export const Projects = () => {
 
     const socialNetworkImage = {
         backgroundImage: `url(${socialNetwork})`,
@@ -18,8 +18,8 @@ function Projects() {
     return (
         <div className={style.projectsBlock}>
             <div className={`${styleContainer.container} ${style.projectsContainer}`}>
-                <Title title={'Projects'}/>
-                <div className={style.projects}>
+                <Title title={'My Projects'}/>
+                <div className={style.projectsWrapper}>
                     <Project
                         title={"SOCIAL NETWORK"}
                         description={"Lorem ipsum dolor sit amet, consectetur adipisicing elit"}
@@ -27,7 +27,7 @@ function Projects() {
                     />
                     <Project
                         title={"TODOLIST"}
-                        description={"Alias dignissimos dolor eos ex incidunt itaque iusto magnam maiores nostrum numquam possimus quam rerum."}
+                        description={"Alias dignissimos dolor eos ex incidunt itaque iusto magnam maiores nostrum."}
                         style={todoListImage}
                     />
                 </div>
@@ -35,5 +35,3 @@ function Projects() {
         </div>
     );
 }
-
-export default Projects;

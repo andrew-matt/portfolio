@@ -5,7 +5,7 @@ import {Title} from "../common/components/title/Title";
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import {faHtml5, faJsSquare, faReact} from "@fortawesome/free-brands-svg-icons";
 
-function Skills() {
+export const Skills = () => {
 
     const reactDescription = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet hic labore nemo obcaecati quam qui voluptatum!"
 
@@ -16,8 +16,8 @@ function Skills() {
     return (
         <div className={style.skillsBlock}>
             <div className={`${styleContainer.container} ${style.skillsContainer}`}>
-                <Title title={'Skills'}/>
-                <div className={style.skills}>
+                <div className={style.title}><Title title={'My Skills'}/></div>
+                <div className={style.skillsWrapper}>
                     <Skill
                         title={"React"}
                         description={reactDescription}
@@ -38,5 +38,3 @@ function Skills() {
         </div>
     );
 }
-
-export default Skills;

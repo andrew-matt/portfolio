@@ -1,11 +1,16 @@
 @import './src/common/styles/sass/variables';
 
 .contactsBlock {
+  //border: 3px solid red;
+  padding: 100px 0 100px 0;
+  position: relative;
   .contactsContainer {
+    //border: 1px solid;
     flex-direction: column;
 
     .contactFormWrapper {
       //border: 1px solid;
+      margin-top: 50px;
       background-color: $elementBgColor;
       border-radius: 10px;
       box-shadow: 10px 10px 19px #1c1e22, -10px -10px 19px #262a2e;
@@ -23,10 +28,12 @@
         outline: 2px solid #191b1e;
         border-radius: 6px;
         font-size: 14px;
+        font-family: $fontSecondary;
         letter-spacing: 1px;
         height: 55px;
         margin-bottom: 20px;
         color: #c4cfde;
+        opacity: .9;
         transition: $transition;
 
         &:focus {
@@ -62,23 +69,32 @@
       .buttonContainer {
 
         .button {
-          cursor: pointer;
           background: linear-gradient(145deg, #1e2024, #23272b);
           border: 0;
           border-radius: 6px;
           box-shadow: 10px 10px 19px #1c1e22, -10px -10px 19px #262a2e;
           font-size: 14px;
           font-weight: 500;
+          position: relative;
+          transition: 0.4s;
+          z-index: 2;
+          cursor: pointer;
           color: #ff014f;
           padding: 15px 35px;
-          transition: 0.4s;
-
-          &:hover {
-            background: linear-gradient(to right bottom, #212428, #16181c);
-          }
         }
       }
     }
+  }
+
+  &::after {
+    position: absolute;
+    width: 80rem;
+    height: 1px;
+    background-color: #121415;
+    bottom: 0;
+    content: '';
+    left: 50%;
+    transform: translate(-50%, 50%);
   }
 }
 

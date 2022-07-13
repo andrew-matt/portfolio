@@ -3,14 +3,18 @@
 
 .link {
   cursor: pointer;
+  display: flex;
 
   .projectContainer {
+    //border: 1px solid red;
     width: 450px;
     min-height: 417px;
     background-color: $elementBgColor;
+    box-shadow: 10px 10px 19px #1c1e22, -10px -10px 19px #262a2e;
     display: flex;
     flex-direction: column;
     padding: 30px;
+    margin-top: 50px;
     border-radius: 20px;
     transition: $transition;
 

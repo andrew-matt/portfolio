@@ -2,7 +2,7 @@ import style from './Contacts.module.scss'
 import styleContainer from "../common/styles/sass/Container.module.scss";
 import {Title} from "../common/components/title/Title";
 
-function Contacts() {
+export const Contacts = () => {
     return (
         <div className={style.contactsBlock}>
             <div className={`${styleContainer.container} ${style.contactsContainer}`}>
@@ -21,5 +21,3 @@ function Contacts() {
         </div>
     )
 }
-
-export default Contacts

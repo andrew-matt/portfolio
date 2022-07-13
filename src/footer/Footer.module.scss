@@ -1,5 +1,8 @@
-.footerBlock {
+@import './src/common/styles/sass/variables';
 
+.footerBlock {
+  //border: 3px solid red;
+  padding: 100px 0 100px 0;
   .footerContainer {
     flex-direction: column;
 
@@ -10,6 +13,9 @@
     .copyright {
       padding: 5px 10px;
       margin-top: 10px;
+      color: #878e99;
+      font-family: $fontPrimary;
+      font-size: 17px;
     }
   }
 }
