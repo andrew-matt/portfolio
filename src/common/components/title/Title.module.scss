@@ -4,17 +4,9 @@
   color: #c4cfde;
   font-size: 38px;
   position: relative;
-
-  //&::after {
-  //  position: absolute;
-  //  background-color: #c4cfde;
-  //  width: 55px;
-  //  height: 1px;
-  //  content: '';
-  //  left: 50%;
-  //  transform: translate(-50%, 50%);
-  //  bottom: -15px;
-  //}
+  @media screen and (max-width: 360px) {
+    font-size: 24px;
+  }
 
   h2 {
     margin: 0;

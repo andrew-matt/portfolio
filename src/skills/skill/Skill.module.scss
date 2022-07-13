@@ -1,7 +1,7 @@
 @import './src/common/styles/sass/variables';
 
 .skillContainer {
-  //border: 1px solid red;
+  border: 1px solid red;
   margin: 50px 25px 0 25px;
   width: 400px;
   min-height: 335px;
@@ -12,9 +12,14 @@
   align-items: start;
   text-align: left;
   padding: 35px 50px;
-  cursor: pointer;
+  //cursor: pointer;
   transition: $transition;
   box-shadow: 10px 10px 19px #1c1e22, -10px -10px 19px #262a2e;
+  @media screen and (max-width: 360px) {
+    width: 330px;
+    padding: 20px;
+    margin: 25px 15px 0 15px;
+  }
 
   &:hover {
     background-color: $elementHoveredBgColor;

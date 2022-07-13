@@ -1,5 +1,4 @@
 import style from './Skills.module.scss';
-import styleContainer from "../common/styles/sass/Container.module.scss";
 import Skill from "./skill/Skill";
 import {Title} from "../common/components/title/Title";
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
@@ -15,8 +14,8 @@ export const Skills = () => {
 
     return (
         <div className={style.skillsBlock}>
-            <div className={`${styleContainer.container} ${style.skillsContainer}`}>
-                <div className={style.title}><Title title={'My Skills'}/></div>
+            <div className={style.skillsContainer}>
+                <Title title={'My Skills'}/>
                 <div className={style.skillsWrapper}>
                     <Skill
                         title={"React"}

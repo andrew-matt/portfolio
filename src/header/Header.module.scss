@@ -1,6 +1,7 @@
 @import '../common/styles/sass/variables';
 
 .header {
+    border: 2px solid green;
     position: absolute;
     top: 0;
     transition: .3s;
@@ -10,4 +11,7 @@
     display: flex;
     justify-content: flex-end;
     align-items: center;
+    @media screen and (max-width: 360px) {
+        justify-content: center;
+    }
 }

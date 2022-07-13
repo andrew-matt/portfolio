@@ -1,4 +1,3 @@
-import styleContainer from "../common/styles/sass/Container.module.scss";
 import style from './Projects.module.scss';
 import Project from "./project/Project";
 import socialNetwork from '../common/images/Social-network.jpg'
@@ -17,7 +16,7 @@ export const Projects = () => {
 
     return (
         <div className={style.projectsBlock}>
-            <div className={`${styleContainer.container} ${style.projectsContainer}`}>
+            <div className={style.projectsContainer}>
                 <Title title={'My Projects'}/>
                 <div className={style.projectsWrapper}>
                     <Project

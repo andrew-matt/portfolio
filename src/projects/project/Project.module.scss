@@ -1,70 +1,77 @@
 @import '../../common/styles/sass/variables';
 @import '../../common/styles/sass/mixins';
 
-.link {
+.projectContainer {
   cursor: pointer;
+  border: 1px solid red;
+  width: 450px;
+  min-height: 417px;
+  background-color: $elementBgColor;
+  box-shadow: 10px 10px 19px #1c1e22, -10px -10px 19px #262a2e;
   display: flex;
+  flex-direction: column;
+  padding: 30px;
+  margin-top: 50px;
+  border-radius: 20px;
+  transition: $transition;
+  @media screen and (max-width: 360px) {
+    width: 330px;
+    padding: 20px;
+    margin-top: 25px;
+  }
 
-  .projectContainer {
-    //border: 1px solid red;
-    width: 450px;
-    min-height: 417px;
-    background-color: $elementBgColor;
-    box-shadow: 10px 10px 19px #1c1e22, -10px -10px 19px #262a2e;
-    display: flex;
-    flex-direction: column;
-    padding: 30px;
-    margin-top: 50px;
-    border-radius: 20px;
-    transition: $transition;
+  &:hover {
+    background-color: $elementHoveredBgColor;
 
-    &:hover {
-      background-color: $elementHoveredBgColor;
-
-      div.imageContainer {
-        transform: scale(1.1);
-      }
+    div.imageContainer {
+      transform: scale(1.1);
     }
+  }
 
-    .imgPlus {
-      display: inline-block;
-      overflow: hidden;
+  .imgPlus {
+    display: inline-block;
+    overflow: hidden;
+    border-radius: 10px;
+
+    .imageContainer {
+      width: 100%;
+      min-height: 293px;
+      background-color: darkgrey;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-size: cover;
+      background-position: center;
       border-radius: 10px;
+      transition: $transition;
+      @media screen and (max-width: 360px) {
 
-      .imageContainer {
-        width: 100%;
-        min-height: 293px;
-        background-color: darkgrey;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-size: cover;
-        background-position: center;
-        border-radius: 10px;
-        transition: $transition;
       }
     }
+  }
 
-    .descriptionContainer {
-      padding-top: 18px;
+  .descriptionContainer {
+    padding-top: 18px;
 
-      .title {
-        padding-bottom: 10px;
-        color: $colorPrimary;
-        @include text($fontPrimary, 12px, 500);
-        letter-spacing: 1px;
+    .title {
+      padding-bottom: 10px;
+      color: $colorPrimary;
+      @include text($fontPrimary, 12px, 500);
+      letter-spacing: 1px;
+    }
+
+    .description {
+      width: fit-content;
+      color: $textColor;
+      transition: $transition;
+      @include text($fontSecondary, 23px, 600);
+      @media screen and (max-width: 360px) {
+        @include text($fontSecondary, 20px, 600);
       }
 
-      .description {
-        width: fit-content;
-        color: $textColor;
-        transition: $transition;
-        @include text($fontSecondary, 23px, 600);
 
-
-        &:hover {
-          color: $colorPrimary;
-        }
+      &:hover {
+        color: $colorPrimary;
       }
     }
   }

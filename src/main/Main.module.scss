@@ -2,62 +2,80 @@
 
 .mainBlock {
   min-height: 100vh;
-  //border: 1px solid red;
+  border: 1px solid red;
   position: relative;
   padding: 150px 0 100px 0;
   display: flex;
   align-items: flex-end;
+  @media screen and (max-width: 360px) {
+    padding: 100px 0 80px 0;
+  }
 
-  .greetingBlock {
-    width: 500px;
+  .mainContainer {
+    border: 1px solid;
+    height: 100%;
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    @media screen and (max-width: 360px) {
+      width: 100%;
+    }
 
-    h1 {
-      font-size: 60px;
-      font-family: $fontSecondary;
-      color: white;
-      margin-bottom: 22px;
+    .greetingBlock {
+      border: 1px solid red;
+      width: 500px;
+      @media screen and (max-width: 400px) {
+        width: 330px;
+      }
 
-      span:last-child {
-        color: $colorPrimary;
+      h1 {
+        border: 1px solid red;
+        font-size: 60px;
+        font-family: $fontSecondary;
+        color: white;
+        margin-bottom: 22px;
+        @media screen and (max-width: 400px) {
+          font-size: 40px;
+        }
+
+        span:last-child {
+          color: $colorPrimary;
+        }
+      }
+
+      p {
+        border: 1px solid red;
+        font-size: 16px;
+        opacity: .9;
+        line-height: 30px;
       }
     }
 
-    p {
-      width: 562px;
-      font-size: 16px;
-      opacity: .9;
-      line-height: 30px;
+    .photoContainer {
+      border: 1px solid red;
+      width: 470px;
+      height: 643px;
+      background-color: #1f2125;
+      box-shadow: 10px 10px 19px #1c1e22, -10px -10px 19px #262a2e;
+      @media screen and (max-width: 360px) {
+        width: 330px;
+        height: 451px;
+      }
     }
-  }
 
-  .photoContainer {
-    width: 470px;
-    height: 643px;
-    background-color: #1f2125;
-    box-shadow: 10px 10px 19px #1c1e22, -10px -10px 19px #262a2e;
-  }
-
-  //
-  //.bottomLineContainer {
-  //  display: flex;
-  //  justify-content: center;
-  //
-  //  .bottomLine {
-  //    width: 80rem;
-  //    height: 1px;
-  //    background-color: #121415;
-  //  }
-  //}
-
-  &::after {
-    position: absolute;
-    width: 80rem;
-    height: 1px;
-    background-color: #121415;
-    bottom: 0;
-    content: '';
-    left: 50%;
-    transform: translate(-50%, 50%);
+    &::after {
+      position: absolute;
+      width: 80rem;
+      height: 1px;
+      background-color: #121415;
+      bottom: 0;
+      content: '';
+      left: 50%;
+      transform: translate(-50%, 50%);
+    }
   }
 }
 

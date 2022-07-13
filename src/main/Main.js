@@ -1,5 +1,4 @@
 import style from './Main.module.scss';
-import styleContainer from '../common/styles/sass/Container.module.scss';
 import Photo from './Photo.png'
 
 export const Main = () => {
@@ -13,7 +12,7 @@ export const Main = () => {
 
     return (
         <div className={style.mainBlock}>
-            <div className={styleContainer.container}>
+            <div className={style.mainContainer}>
                 <div className={style.greetingBlock}>
                     <h1>
                         <span>Hi, I'm</span>
