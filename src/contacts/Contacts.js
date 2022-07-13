@@ -6,7 +6,7 @@ export const Contacts = () => {
         <div className={style.contactsBlock}>
             <div className={style.contactsContainer}>
                 <Title title={'Contact With Me'}/>
-                <form className={style.contactFormWrapper} spellCheck={"false"}>
+                <form className={style.contactsFormWrapper} spellCheck={"false"}>
                     <input type="text" className={style.input}/>
                     <input type="text" className={style.input}/>
                     <textarea cols="30" rows="10" className={style.textarea}/>

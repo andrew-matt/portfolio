@@ -9,9 +9,9 @@
     z-index: 999;
     height: 122px;
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     align-items: center;
-    @media screen and (max-width: 360px) {
-        justify-content: center;
+    @media screen and (min-width: 500px) {
+        justify-content: flex-end;
     }
 }

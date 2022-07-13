@@ -22,24 +22,24 @@
       width: 100%;
     }
 
-    .contactFormWrapper {
-      //border: 1px solid;
+    .contactsFormWrapper {
+      border: 1px solid red;
       margin-top: 50px;
       background-color: $elementBgColor;
       border-radius: 10px;
       box-shadow: 10px 10px 19px #1c1e22, -10px -10px 19px #262a2e;
-      width: 715px;
+      width: 100%;
       height: auto;
       padding: 30px;
       display: flex;
       flex-direction: column;
+      @media screen and (min-width: 910px) {
+        width: 715px;
+      }
       @media screen and (max-width: 360px) {
         width: 330px;
         padding: 20px;
         margin-top: 25px;
-      }
-      @media screen and (max-width: 768px) {
-        width: 90%;
       }
 
       .input {
