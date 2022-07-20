@@ -1,80 +1,84 @@
 @import '../../common/styles/sass/variables';
 @import '../../common/styles/sass/mixins';
 
-.projectContainer {
-  cursor: pointer;
+.container {
   //border: 1px solid red;
-  width: 450px;
-  min-height: 417px;
-  background-color: $elementBgColor;
-  box-shadow: 10px 10px 19px #1c1e22, -10px -10px 19px #262a2e;
-  display: flex;
-  flex-direction: column;
-  padding: 30px;
-  margin-top: 50px;
-  border-radius: 20px;
-  transition: $transition;
-  @media screen and (max-width: 360px) {
-    width: 330px;
-    padding: 20px;
-    margin-top: 25px;
+  margin-top: 30px;
+  padding: 0 15px;
+  @media (min-width: 576px) {
+    max-width: 100%;
+    margin-top: 30px;
+  }
+  @media (min-width: 768px) {
+    max-width: 50%;
+  }
+  @media (min-width: 992px) {
+    margin-top: 50px;
+  }
+  @media (min-width: 1200px) {
+    max-width: 33.333333%;
+  }
+  @media (min-width: 1600px) {
+    padding: 0 25px;
   }
 
-  &:hover {
-    background-color: $elementHoveredBgColor;
-
-    div.imageContainer {
-      transform: scale(1.1);
+  .project {
+    //border: 1px solid white;
+    background-color: $elementBgColor;
+    border-radius: 20px;
+    box-shadow: 10px 10px 19px #1c1e22, -10px -10px 19px #262a2e;
+    height: 100%;
+    padding: 30px;
+    text-align: left;
+    transition: $transition;
+    cursor: pointer;
+    @media (max-width: 479px) {
+      padding: 20px;
     }
-  }
 
-  .imgPlus {
-    display: inline-block;
-    overflow: hidden;
-    border-radius: 10px;
+    &:hover {
+      background-color: $elementHoveredBgColor;
 
-    .imageContainer {
-      width: 100%;
-      min-height: 293px;
-      background-color: darkgrey;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background-size: cover;
-      background-position: center;
+      img {
+        transform: scale(1.1);
+      }
+    }
+
+    .imageWrapper {
+      //border: 1px solid white;
+      overflow: hidden;
       border-radius: 10px;
-      transition: $transition;
-      @media screen and (max-width: 360px) {
 
+      .image {
+        //border: 1px solid white;
+        display: block;
+        width: 100%;
+        transition: $transition;
       }
     }
-  }
 
-  .descriptionContainer {
-    padding-top: 18px;
+    .content {
+      padding-top: 18px;
 
-    .title {
-      padding-bottom: 10px;
-      color: $colorPrimary;
-      @include fontFamily($fontPrimary, 500);
-      @include fontSize(12px, normal);
-      letter-spacing: 1px;
-    }
-
-    .description {
-      width: fit-content;
-      color: $textColor;
-      transition: $transition;
-      @include fontFamily($fontSecondary, 600);
-      @include fontSize(23px, normal);
-      @media screen and (max-width: 360px) {
-        @include fontFamily($fontSecondary, 600);
-        @include fontSize(20px, normal);
-      }
-
-
-      &:hover {
+      .title {
+        padding-bottom: 10px;
         color: $colorPrimary;
+        @include fontFamily($fontPrimary, 500);
+        @include fontSize(12px, normal);
+        letter-spacing: 1px;
+      }
+
+      .description {
+        transition: $transition;
+        @include fontFamily($fontSecondary, 600);
+        @include fontSize(20px, 30px);
+        @media (min-width: 480px) {
+          @include fontSize(23px, 34px);
+        }
+
+        &:hover {
+          color: $colorPrimary;
+        }
       }
     }
   }

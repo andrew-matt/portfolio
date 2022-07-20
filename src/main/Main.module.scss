@@ -9,6 +9,7 @@
   .container {
     //border: 1px solid;
     @include container();
+    padding: 0 15px;
     @include flex(row, center, center, wrap);
 
     .greeting {
