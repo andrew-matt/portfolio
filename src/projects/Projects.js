@@ -1,7 +1,7 @@
 import style from './Projects.module.scss';
 import Project from "./project/Project";
-import socialNetwork from '../common/images/Social-network.jpg'
-import todoList from '../common/images/Todolist.jpg'
+import socialNetwork from '../assets/images/Social-network.jpg'
+import todoList from '../assets/images/Todolist.jpg'
 import {Title} from "../common/components/title/Title";
 
 export const Projects = () => {

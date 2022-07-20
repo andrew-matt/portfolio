@@ -1,15 +1,14 @@
-.title {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 700;
-  color: #c4cfde;
-  font-size: 38px;
-  position: relative;
-  @media screen and (max-width: 360px) {
-    font-size: 24px;
-  }
+@import './src/common/styles/sass/variables';
+@import './src/common/styles/sass/mixins';
 
-  h2 {
-    margin: 0;
+.title {
+  @include fontFamily($fontSecondary, 700);
+  @include fontSize(34px, 1.2);
+  @media (min-width: 576px) {
+    font-size: 40px;
+  }
+  @media (min-width: 1200px) {
+    font-size: 60px;
   }
 }
 

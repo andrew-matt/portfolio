@@ -5,24 +5,18 @@ export const Main = () => {
 
     const mainDescription = 'a Front-end Developer. Nec ullamcorper sit amet risus nullam eget felis. Felis eget nunc lobortis mattis aliquam faucibus. Ullamcorper malesuada proin libero nunc. Purus faucibus ornare suspendisse sed nisi lacus sed. Pellentesque elit eget gravida cum.'
 
-    const photoStyle = {
-        backgroundImage: `url(${Photo})`,
-        backgroundSize: 'cover'
-    }
-
     return (
         <div className={style.mainBlock}>
-            <div className={style.mainContainer}>
-                <div className={style.greetingBlock}>
+            <div className={style.container}>
+                <div className={style.greeting}>
                     <h1>
                         <span>Hi, I'm</span>
                         <span> Andrei Matviychuk</span>
                     </h1>
                     <p>{mainDescription}</p>
                 </div>
-                <div>
-                    <div className={style.photoContainer} style={photoStyle}>
-                    </div>
+                <div className={style.photo}>
+                    <img src={Photo} width='100%'/>
                 </div>
             </div>
         </div>

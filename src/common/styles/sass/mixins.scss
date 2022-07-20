@@ -1,5 +1,46 @@
-@mixin text($fontFamily, $fontSize, $fontWeight) {
-  font-size: $fontSize;
-  font-weight: $fontWeight;
+@mixin fontFamily($fontFamily, $fontWeight) {
   font-family: $fontFamily;
+  font-weight: $fontWeight;
+}
+
+@mixin fontSize($fontSize, $lineHeight) {
+  font-size: $fontSize;
+  line-height: $lineHeight;
+}
+
+@mixin container() {
+  margin: 0 auto;
+  padding: 0 15px;
+  @media (min-width: 576px) {
+    max-width: 540px;
+  }
+  @media (min-width: 768px) {
+    max-width: 720px;
+  }
+  @media (min-width: 992px) {
+    max-width: 960px;
+  }
+  @media (min-width: 1200px) {
+    max-width: 1310px;
+  }
+}
+
+@mixin flex($direction, $justifyContent, $alignItems, $wrap) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justifyContent;
+  align-items: $alignItems;
+  flex-wrap: $wrap;
+}
+
+@mixin bottomLine() {
+  position: absolute;
+  background-color: #121415;
+  content: '';
+  max-width: 1270px;
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
 }

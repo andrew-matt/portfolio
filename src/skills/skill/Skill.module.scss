@@ -1,48 +1,64 @@
 @import './src/common/styles/sass/variables';
+@import './src/common/styles/sass/mixins';
 
-.skillContainer {
+.container {
   //border: 1px solid red;
-  margin: 50px 25px 0 25px;
-  width: 400px;
-  min-height: 335px;
-  background-color: $elementBgColor;
-  border-radius: 10px;
-  display: flex;
-  flex-direction: column;
-  align-items: start;
-  text-align: left;
-  padding: 35px 50px;
-  //cursor: pointer;
-  transition: $transition;
-  box-shadow: 10px 10px 19px #1c1e22, -10px -10px 19px #262a2e;
-  @media screen and (max-width: 360px) {
-    width: 330px;
+  margin-top: 30px;
+  padding: 0 15px;
+  @media (min-width: 576px) {
+    max-width: 100%;
+    margin-top: 30px;
+  }
+  @media (min-width: 768px) {
+    max-width: 50%;
+  }
+  @media (min-width: 992px) {
+    margin-top: 50px;
+  }
+  @media (min-width: 1200px) {
+    max-width: 33.333333%;
+  }
+
+  .skill {
+    //border: 1px solid white;
+    background-color: $elementBgColor;
+    border-radius: 10px;
+    box-shadow: 10px 10px 19px #1c1e22, -10px -10px 19px #262a2e;
+    height: 100%;
     padding: 20px;
-    margin: 25px 15px 0 15px;
-  }
+    text-align: left;
+    transition: $transition;
+    @media (min-width: 480px) {
+      padding: 30px;
+    }
+    @media (min-width: 992px) {
+      padding: 50px;
+    }
 
-  &:hover {
-    background-color: $elementHoveredBgColor;
-    color: white;
-  }
+    &:hover {
+      background-color: $elementHoveredBgColor;
+      color: white;
+    }
 
-  .icon {
-    margin-top: 15px;
-    margin-bottom: 29px;
-  }
+    .icon {
+      margin-bottom: 10px;
+      @media (min-width: 768px) {
+        margin-bottom: 30px;
+      }
+    }
 
-  .title {
-    font-size: 24px;
-    font-weight: 500;
-    line-height: 32px;
-    margin-bottom: 20px;
-  }
+    .title {
+      font-weight: 500;
+      @include fontSize(24px, 32px);
+      margin-bottom: 15px;
+      @media (min-width: 768px) {
+        margin-bottom: 20px;
+      }
+    }
 
-  .description {
-    font-size: 16px;
-    line-height: 28px;
-    margin-bottom: 22px;
+    .description {
+      @include fontSize(16px, 28px);
+    }
   }
 }
-
 

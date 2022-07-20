@@ -14,9 +14,9 @@ export const Skills = () => {
 
     return (
         <div className={style.skillsBlock}>
-            <div className={style.skillsContainer}>
+            <div className={style.container}>
                 <Title title={'My Skills'}/>
-                <div className={style.skillsWrapper}>
+                <div className={style.skills}>
                     <Skill
                         title={"React"}
                         description={reactDescription}
