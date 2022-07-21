@@ -1,0 +1,21 @@
+@import './src/common/styles/sass/variables';
+@import './src/common/styles/sass/mixins';
+
+.button {
+  background: $elementBgColor;
+  box-shadow: 10px 10px 19px #1c1e22, -10px -10px 19px #262a2e;
+  color: $colorPrimary;
+  border: 0;
+  border-radius: 6px;
+  padding: 15px 35px;
+  @include fontFamily($fontPrimary, 400);
+  @include fontSize(14px, normal);
+  cursor: pointer;
+  transition: $transition;
+
+  &:hover {
+    background: $elementHoveredBgColor;
+  }
+}
+
+

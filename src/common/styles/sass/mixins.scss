@@ -33,6 +33,23 @@
   flex-wrap: $wrap;
 }
 
+@mixin input() {
+  background-color: #191b1e;
+  box-shadow: 1px 4px 2px -3px rgba(0, 0, 0, .7) inset, -1px -3px 3px -2px hsla(0, 0%, 100%, .2) inset;
+  height: 55px;
+  padding: 0 15px;
+  margin-bottom: 20px;
+  outline: 2px solid #191b1e;
+  border: 2px solid #191b1e;
+  border-radius: 6px;
+  font-family: 'Montserrat', sans-serif;
+  color: #c4cfde;
+  font-size: 14px;
+  letter-spacing: 1px;
+  opacity: .9;
+  transition: 0.4s;
+}
+
 @mixin bottomLine() {
   position: absolute;
   background-color: #121415;
