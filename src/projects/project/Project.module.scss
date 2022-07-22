@@ -65,10 +65,12 @@
         @include fontFamily($fontPrimary, 500);
         @include fontSize(12px, normal);
         letter-spacing: 1px;
+        filter: blur(0);
       }
 
       .description {
         transition: $transition;
+        filter: blur(0);
         @include fontFamily($fontSecondary, 600);
         @include fontSize(20px, 30px);
         @media (min-width: 480px) {
