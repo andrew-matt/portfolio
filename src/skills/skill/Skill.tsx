@@ -1,6 +1,13 @@
-import style from './Skill.module.scss';
+import style from './Skill.module.scss'
+import {ReactNode} from 'react'
 
-function Skill(props) {
+type SkillPropsType = {
+    title: string
+    description: string
+    icon: ReactNode
+}
+
+function Skill(props: SkillPropsType) {
     return (
         <div className={style.container}>
             <div className={style.skill}>

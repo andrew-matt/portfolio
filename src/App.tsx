@@ -8,17 +8,17 @@ import {Footer} from './footer/Footer'
 import {Freelance} from './freelance/Freelance'
 
 function App() {
-    return (
-        <div className={style.App}>
-            <Header/>
-            <Main/>
-            <Skills/>
-            <Projects/>
-            <Freelance/>
-            <Contacts/>
-            <Footer/>
-        </div>
-    )
+  return (
+      <div className={style.App}>
+        <Header/>
+        <Main/>
+        <Skills/>
+        <Projects/>
+        <Freelance/>
+        <Contacts/>
+        <Footer/>
+      </div>
+  )
 }
 
 export default App

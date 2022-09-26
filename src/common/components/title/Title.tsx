@@ -1,6 +1,10 @@
 import style from './Title.module.scss'
 
-export const Title = (props) => {
+type TitlePropsType = {
+    title: string
+}
+
+export const Title = (props: TitlePropsType) => {
     return (
         <h2 className={style.title}>{props.title}</h2>
     )

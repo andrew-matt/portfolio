@@ -1,6 +1,12 @@
-import style from './Project.module.scss';
+import style from './Project.module.scss'
 
-function Project(props) {
+type ProjectPropsType = {
+    title: string
+    description: string
+    image: string
+}
+
+function Project(props: ProjectPropsType) {
     return (
         <div className={style.container}>
             <a>
@@ -15,7 +21,7 @@ function Project(props) {
                 </div>
             </a>
         </div>
-    );
+    )
 }
 
-export default Project;
+export default Project

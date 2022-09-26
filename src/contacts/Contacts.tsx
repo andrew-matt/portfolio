@@ -2,6 +2,8 @@ import style from './Contacts.module.scss'
 import {Title} from '../common/components/title/Title'
 import {Button} from '../common/components/button/Button'
 import {useFormik} from 'formik'
+import * as Yup from 'yup'
+import axios from 'axios'
 
 export const Contacts = () => {
 
@@ -11,14 +13,14 @@ export const Contacts = () => {
             email: '',
             message: '',
         },
-        // validationSchema: Yup.object({
-        //     name: Yup.string().required('Name is required'),
-        //     email: Yup.string().email('Invalid email address').required('Email is required'),
-        //     message: Yup.string().required('Message is required'),
-        // }),
-        onSubmit: (values, formikHelpers) => {
-            // formik.resetForm()
-            // axios.post('https://smtp-nodejs-server-39586.herokuapp.com/sendMessage', {values})
+        validationSchema: Yup.object({
+            name: Yup.string().required('Name is required'),
+            email: Yup.string().email('Invalid email address').required('Email is required'),
+            message: Yup.string().required('Message is required'),
+        }),
+        onSubmit: values => {
+            formik.resetForm()
+            axios.post('https://smtp-nodejs-server-39586.herokuapp.com/sendMessage', {values})
         },
     })
 
@@ -43,7 +45,7 @@ export const Contacts = () => {
                     </div>
                     <div className={style.wrapper}>
                         <span className={style.title}>your message</span>
-                        <textarea cols="30" rows="10"
+                        <textarea cols={30} rows={10}
                                   className={style.textarea} {...formik.getFieldProps('message')}/>
                         <div className={style.error}>
                             {formik.touched.message && formik.errors.message ? formik.errors.message : null}
