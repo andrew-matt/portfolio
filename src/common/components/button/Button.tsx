@@ -1,13 +1,15 @@
-import style from './Button.module.scss'
+import { FC } from 'react';
+
+import style from './Button.module.scss';
 
 type ButtonPropsType = {
-    title: string
-}
+  title: string;
+};
 
-export const Button = (props: ButtonPropsType) => {
-    return (
-        <button type={'submit'} className={style.button}>
-            <span>{props.title}</span>
-        </button>
-    )
-}
+export const Button: FC<ButtonPropsType> = ({ title }) => {
+  return (
+    <button type="submit" className={style.button}>
+      <span>{title}</span>
+    </button>
+  );
+};

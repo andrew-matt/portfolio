@@ -1,22 +1,21 @@
-import style from './Skill.module.scss'
-import {ReactNode} from 'react'
+import { FC, ReactNode } from 'react';
+
+import style from './Skill.module.scss';
 
 type SkillPropsType = {
-    title: string
-    description: string
-    icon: ReactNode
-}
+  title: string;
+  description: string;
+  icon: ReactNode;
+};
 
-function Skill(props: SkillPropsType) {
-    return (
-        <div className={style.container}>
-            <div className={style.skill}>
-                <div className={style.icon}>{props.icon}</div>
-                <h4 className={style.title}>{props.title}</h4>
-                <div className={style.description}>{props.description}</div>
-            </div>
-        </div>
-    );
-}
-
-export default Skill;
+export const Skill: FC<SkillPropsType> = ({ title, description, icon }) => {
+  return (
+    <div className={style.container}>
+      <div className={style.skill}>
+        <div className={style.icon}>{icon}</div>
+        <h4 className={style.title}>{title}</h4>
+        <div className={style.description}>{description}</div>
+      </div>
+    </div>
+  );
+};
