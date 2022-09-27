@@ -4,11 +4,12 @@ import style from './Button.module.scss';
 
 type ButtonPropsType = {
   title: string;
+  disabled?: boolean;
 };
 
-export const Button: FC<ButtonPropsType> = ({ title }) => {
+export const Button: FC<ButtonPropsType> = ({ title, disabled }) => {
   return (
-    <button type="submit" className={style.button}>
+    <button type="submit" disabled={disabled} className={style.button}>
       <span>{title}</span>
     </button>
   );
