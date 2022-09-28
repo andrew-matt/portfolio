@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { FC, useState } from 'react';
 
+import { CircularProgress } from '@mui/material';
 import { AlertColor } from '@mui/material/Alert/Alert';
 import axios, { AxiosError } from 'axios';
 import { useFormik } from 'formik';
@@ -13,10 +14,10 @@ import { SnackBar } from 'common/components/snackbar/SnackBar';
 import { Title } from 'common/components/title/Title';
 
 export const Contacts: FC = () => {
+  const [sendingMessageStatus, setSendingMessageStatus] = useState(false);
   const [snackBarOpen, setSnackBarOpen] = useState(false);
   const [snackBarTitle, setSnackBarTitle] = useState('');
   const [snackBarSeverity, setSnackBarSeverity] = useState<AlertColor>('' as AlertColor);
-  const [disabled, setDisabled] = useState(false);
 
   const formik = useFormik({
     initialValues: {
@@ -31,7 +32,7 @@ export const Contacts: FC = () => {
     }),
     onSubmit: async values => {
       try {
-        setDisabled(true);
+        setSendingMessageStatus(true);
         await axios.post('https://smtp-nodejs-server-39586.herokuapp.com/sendMessage', {
           values,
         });
@@ -42,14 +43,14 @@ export const Contacts: FC = () => {
         const err = error as Error | AxiosError<{ error: string }>;
 
         if (axios.isAxiosError(err)) {
-          setDisabled(true);
+          setSendingMessageStatus(true);
           setSnackBarTitle(err.message);
           setSnackBarSeverity('error');
           setSnackBarOpen(true);
         }
       } finally {
         formik.resetForm();
-        setDisabled(false);
+        setSendingMessageStatus(false);
       }
     },
   });
@@ -96,9 +97,16 @@ export const Contacts: FC = () => {
                   : null}
               </div>
             </div>
-            <div>
-              <Button title="SEND MESSAGE" disabled={disabled} />
-            </div>
+            {sendingMessageStatus ? (
+              <div className={style.loadingWrapper}>
+                <CircularProgress className={style.loadingCircular} />
+                <span className={style.loadingMessage}>Sending message...</span>
+              </div>
+            ) : (
+              <div>
+                <Button title="SEND MESSAGE" />
+              </div>
+            )}
           </form>
         </div>
       </div>

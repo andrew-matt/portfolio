@@ -76,8 +76,22 @@
         .error {
           text-align: start;
           color: red;
-          @include fontFamily($fontPrimary, 200);
+          @include fontFamily($fontPrimary, 400);
           font-size: 18px;
+          filter: blur(0);
+        }
+      }
+
+      .loadingWrapper {
+        display: flex;
+        align-items: center;
+
+        .loadingCircular {
+          color: $colorPrimary;
+        }
+
+        .loadingMessage {
+          margin-left: 10px;
         }
       }
     }
