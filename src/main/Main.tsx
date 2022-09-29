@@ -12,7 +12,7 @@ export const Main: FC = () => {
     'Nec ullamcorper sit amet risus nullam eget felis. Felis eget nunc lobortis mattis aliquam faucibus. Ullamcorper malesuada proin libero nunc. Purus faucibus ornare suspendisse sed nisi lacus sed. Pellentesque elit eget gravida cum.';
 
   return (
-    <div className={style.mainBlock}>
+    <div id="main" className={style.mainBlock}>
       <Fade top>
         <div className={style.container}>
           <div className={style.greeting}>

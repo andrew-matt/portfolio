@@ -10,7 +10,7 @@ import { Project } from 'projects/project/Project';
 
 export const Projects: FC = () => {
   return (
-    <div className={style.projectsBlock}>
+    <div id="projects" className={style.projectsBlock}>
       <div className={style.container}>
         <Title title="My Projects" />
         <div className={style.projects}>

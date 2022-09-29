@@ -19,7 +19,7 @@ export const Skills: FC = () => {
     'Magna fermentum iaculis eu non diam phasellus vestibulum lorem sed.';
 
   return (
-    <div className={style.skillsBlock}>
+    <div id="skills" className={style.skillsBlock}>
       <div className={style.container}>
         <Title title="My Skills" />
         <div className={style.skills}>

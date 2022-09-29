@@ -1,12 +1,13 @@
 @import '../common/styles/sass/variables';
 
 .nav {
+  //border: 1px solid red;
   font-family: $fontSecondary;
   font-size: 13px;
   font-weight: 400;
-  //border: 1px solid;
   display: flex;
   margin-right: 0;
+  filter: blur(0);
   @media screen and (min-width: 1200px) {
     margin-right: 100px;
   }
@@ -23,10 +24,16 @@
     margin: 10px 5px;
     padding: 5px 10px;
     transition: $transition;
+    cursor: pointer;
 
     &:hover {
       opacity: 1;
       color: white;
     }
+  }
+
+  .active {
+    opacity: 1 !important;
+    color: white;
   }
 }
