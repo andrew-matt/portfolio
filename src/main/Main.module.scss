@@ -41,9 +41,14 @@
           @include fontSize(60px, 75px);
         }
 
-        span:last-child {
-          //border: 1px solid white;
+        span:nth-child(2) {
           color: $colorPrimary;
+        }
+
+        span:last-child {
+          color: white;
+          font-size: 48px;
+          font-weight: 600;
         }
       }
 
@@ -79,10 +84,10 @@
     //    height: 451px;
     //  }
     //}
+  }
 
-    &::after {
-      @include bottomLine();
-    }
+  &::after {
+    @include bottomLine();
   }
 }
 
