@@ -1,4 +1,4 @@
-import { FC } from 'react';
+import { FC, SyntheticEvent } from 'react';
 
 import style from './Project.module.scss';
 
@@ -6,12 +6,20 @@ type ProjectPropsType = {
   title: string;
   description: string;
   image: string;
+  link: string;
 };
 
-export const Project: FC<ProjectPropsType> = ({ title, image, description }) => {
+export const Project: FC<ProjectPropsType> = ({ title, image, description, link }) => {
+  const onLinkClickHandler = (event: SyntheticEvent<HTMLAnchorElement>): void => {
+    event.preventDefault();
+    if (event.type === 'click') {
+      window.open(link);
+    }
+  };
+
   return (
     <div className={style.container}>
-      <div>
+      <a onClick={onLinkClickHandler} href={link} className={style.link}>
         <div className={style.project}>
           <div className={style.imageWrapper}>
             <img src={image} className={style.image} alt="project" />
@@ -21,7 +29,7 @@ export const Project: FC<ProjectPropsType> = ({ title, image, description }) => 
             <div className={style.description}>{description}</div>
           </div>
         </div>
-      </div>
+      </a>
     </div>
   );
 };

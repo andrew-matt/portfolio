@@ -1,7 +1,6 @@
 @import '../common/styles/sass/variables';
 
 .nav {
-  //border: 1px solid red;
   font-family: $fontSecondary;
   font-size: 13px;
   font-weight: 400;
@@ -35,5 +34,9 @@
   .active {
     opacity: 1 !important;
     color: white;
+  }
+
+  @media screen and (max-width: 400px) {
+    display: none;
   }
 }

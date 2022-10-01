@@ -61,8 +61,10 @@ export const Contacts: FC = () => {
     <div>
       <div id="contacts" className={style.block}>
         <div className={style.container}>
-          <Title title="Contact With Me" />
-          <Fade left>
+          <Fade bottom>
+            <Title title="Contact With Me" />
+          </Fade>
+          <Fade bottom>
             <form
               className={style.form}
               spellCheck="false"

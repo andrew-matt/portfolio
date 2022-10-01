@@ -22,6 +22,11 @@
     padding: 0 25px;
   }
 
+  .link {
+    text-decoration: none;
+    color: $textColor;
+  }
+
   .project {
     //border: 1px solid white;
     background-color: $elementBgColor;

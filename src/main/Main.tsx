@@ -13,14 +13,15 @@ export const Main: FC = () => {
 
   return (
     <div id="main" className={style.mainBlock}>
-      <Fade top>
+      <Fade bottom>
         <div className={style.container}>
           <div className={style.greeting}>
             <h1>
               <span>Hi, I&apos;m</span>
               <span> Andrei Matviychuk</span>
               <div>
-                <ReactTypingEffect text="a Front-end Developer" />
+                <span>a </span>
+                <ReactTypingEffect text="Front-end Developer" eraseDelay={86400000} />
               </div>
             </h1>
             <p>{mainDescription}</p>

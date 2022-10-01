@@ -8,6 +8,8 @@ import style from './Skills.module.scss';
 import { Title } from 'common/components/title/Title';
 import { Skill } from 'skills/skill/Skill';
 
+const Fade = require('react-reveal/Fade');
+
 export const Skills: FC = () => {
   const reactDescription =
     'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet hic labore nemo obcaecati quam qui voluptatum!';
@@ -21,24 +23,28 @@ export const Skills: FC = () => {
   return (
     <div id="skills" className={style.skillsBlock}>
       <div className={style.container}>
-        <Title title="My Skills" />
-        <div className={style.skills}>
-          <Skill
-            title="React"
-            description={reactDescription}
-            icon={<FontAwesomeIcon icon={faReact} color="#ff014f" size="3x" />}
-          />
-          <Skill
-            title="JS"
-            description={javascriptDescription}
-            icon={<FontAwesomeIcon icon={faJsSquare} color="#ff014f" size="3x" />}
-          />
-          <Skill
-            title="HTML & CSS"
-            description={htmlDescription}
-            icon={<FontAwesomeIcon icon={faHtml5} color="#ff014f" size="3x" />}
-          />
-        </div>
+        <Fade bottom>
+          <Title title="My Skills" />
+        </Fade>
+        <Fade bottom>
+          <div className={style.skills}>
+            <Skill
+              title="React"
+              description={reactDescription}
+              icon={<FontAwesomeIcon icon={faReact} color="#ff014f" size="3x" />}
+            />
+            <Skill
+              title="JS"
+              description={javascriptDescription}
+              icon={<FontAwesomeIcon icon={faJsSquare} color="#ff014f" size="3x" />}
+            />
+            <Skill
+              title="HTML & CSS"
+              description={htmlDescription}
+              icon={<FontAwesomeIcon icon={faHtml5} color="#ff014f" size="3x" />}
+            />
+          </div>
+        </Fade>
       </div>
     </div>
   );

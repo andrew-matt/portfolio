@@ -45,9 +45,18 @@
           color: $colorPrimary;
         }
 
+        div,
         span:last-child {
+          @media only screen and (max-width: 479px) {
+            font-size: 26px;
+          }
+          @media (min-width: 576px) {
+            font-size: 40px;
+          }
+          @media (min-width: 1200px) {
+            font-size: 45px;
+          }
           color: white;
-          font-size: 48px;
           font-weight: 600;
         }
       }
