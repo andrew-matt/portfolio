@@ -1,5 +1,6 @@
 import { FC } from 'react';
 
+import questionCards from '../assets/images/Question-cards.jpg';
 import socialNetwork from '../assets/images/Social-network.jpg';
 import todoList from '../assets/images/Todolist.png';
 
@@ -38,7 +39,7 @@ export const Projects: FC = () => {
             <Project
               title="QUESTION CARDS"
               description="dignissimos dolor eos ex itaque iusto magnam maiores nostrum."
-              image={todoList}
+              image={questionCards}
               link={questionCardsLink}
             />
           </div>
