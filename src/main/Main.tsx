@@ -12,8 +12,8 @@ export const Main: FC = () => {
     'Nec ullamcorper sit amet risus nullam eget felis. Felis eget nunc lobortis mattis aliquam faucibus. Ullamcorper malesuada proin libero nunc. Purus faucibus ornare suspendisse sed nisi lacus sed. Pellentesque elit eget gravida cum.';
 
   return (
-    <div id="main" className={style.mainBlock}>
-      <Fade bottom>
+    <Fade bottom>
+      <div id="main" className={style.mainBlock}>
         <div className={style.container}>
           <div className={style.greeting}>
             <h1>
@@ -30,7 +30,7 @@ export const Main: FC = () => {
             <img src={Photo} width="100%" alt="me" />
           </div>
         </div>
-      </Fade>
-    </div>
+      </div>
+    </Fade>
   );
 };

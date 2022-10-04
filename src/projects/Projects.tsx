@@ -17,34 +17,36 @@ export const Projects: FC = () => {
   const questionCardsLink = 'https://andrew-matt.github.io/question-cards';
 
   return (
-    <div id="projects" className={style.projectsBlock}>
-      <div className={style.container}>
-        <Fade bottom>
-          <Title title="My Projects" />
-        </Fade>
-        <Fade bottom>
-          <div className={style.projects}>
-            <Project
-              title="TODOLIST"
-              description="Alias dignissimos dolor eos ex incidunt itaque iusto magnam maiores nostrum."
-              image={todoList}
-              link={todolistLink}
-            />
-            <Project
-              title="SOCIAL NETWORK"
-              description="Lorem ipsum dolor sit amet, consectetur adipisicing elit"
-              image={socialNetwork}
-              link={socialNetworkLink}
-            />
-            <Project
-              title="QUESTION CARDS"
-              description="dignissimos dolor eos ex itaque iusto magnam maiores nostrum."
-              image={questionCards}
-              link={questionCardsLink}
-            />
-          </div>
-        </Fade>
+    <Fade bottom>
+      <div id="projects" className={style.projectsBlock}>
+        <div className={style.container}>
+          <Fade bottom>
+            <Title title="My Projects" />
+          </Fade>
+          <Fade bottom>
+            <div className={style.projects}>
+              <Project
+                title="TODOLIST"
+                description="Alias dignissimos dolor eos ex incidunt itaque iusto magnam maiores nostrum."
+                image={todoList}
+                link={todolistLink}
+              />
+              <Project
+                title="SOCIAL NETWORK"
+                description="Lorem ipsum dolor sit amet, consectetur adipisicing elit"
+                image={socialNetwork}
+                link={socialNetworkLink}
+              />
+              <Project
+                title="QUESTION CARDS"
+                description="dignissimos dolor eos ex itaque iusto magnam maiores nostrum."
+                image={questionCards}
+                link={questionCardsLink}
+              />
+            </div>
+          </Fade>
+        </div>
       </div>
-    </div>
+    </Fade>
   );
 };

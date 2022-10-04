@@ -9,17 +9,19 @@ const Fade = require('react-reveal/Fade');
 
 export const Freelance: FC = () => {
   return (
-    <div className={style.block}>
-      <div className={style.footerContainer}>
-        <Fade bottom>
-          <Title title="I Am Available For Freelance" />
-        </Fade>
-        <Fade bottom>
-          <div>
-            <Button title="HIRE ME" />
-          </div>
-        </Fade>
+    <Fade bottom>
+      <div className={style.block}>
+        <div className={style.footerContainer}>
+          <Fade bottom>
+            <Title title="I Am Available For Freelance" />
+          </Fade>
+          <Fade bottom>
+            <div>
+              <Button title="HIRE ME" />
+            </div>
+          </Fade>
+        </div>
       </div>
-    </div>
+    </Fade>
   );
 };

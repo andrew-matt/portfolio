@@ -32,11 +32,14 @@
     "web-vitals": "^2.1.0",
     "yup": "^0.32.11"
   },
+  "homepage": "https://andrew-matt.github.io/portfolio",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "prepare": "husky install",
     "lint-fix": "eslint --fix"
   },
@@ -72,6 +75,7 @@
     "eslint-plugin-promise": "^6.0.0",
     "eslint-plugin-react": "^7.31.8",
     "eslint-plugin-react-hooks": "^4.6.0",
+    "gh-pages": "^4.0.0",
     "husky": "^8.0.0",
     "prettier": "^2.7.1"
   }
