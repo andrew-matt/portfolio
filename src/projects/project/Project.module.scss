@@ -80,7 +80,7 @@
         @include fontFamily($fontSecondary, 600);
         @include fontSize(20px, 30px);
         @media (min-width: 480px) {
-          @include fontSize(23px, 34px);
+          @include fontSize(16px, 16px);
         }
 
         &:hover {

@@ -4,12 +4,12 @@ import style from './Project.module.scss';
 
 type ProjectPropsType = {
   title: string;
-  description: string;
+  features: { id: number; text: string }[];
   image: string;
   link: string;
 };
 
-export const Project: FC<ProjectPropsType> = ({ title, image, description, link }) => {
+export const Project: FC<ProjectPropsType> = ({ title, features, image, link }) => {
   const onLinkClickHandler = (event: SyntheticEvent<HTMLAnchorElement>): void => {
     event.preventDefault();
     if (event.type === 'click') {
@@ -26,7 +26,14 @@ export const Project: FC<ProjectPropsType> = ({ title, image, description, link 
           </div>
           <div className={style.content}>
             <div className={style.title}>{title}</div>
-            <div className={style.description}>{description}</div>
+            <div className={style.description}>
+              Implemented features:
+              <ul style={{ marginLeft: '30px', marginTop: '5px' }}>
+                {features.map(feature => (
+                  <li key={feature.id}>{feature.text}</li>
+                ))}
+              </ul>
+            </div>
           </div>
         </div>
       </a>

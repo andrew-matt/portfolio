@@ -27,21 +27,43 @@ export const Projects: FC = () => {
             <div className={style.projects}>
               <Project
                 title="TODOLIST"
-                description="Alias dignissimos dolor eos ex incidunt itaque iusto magnam maiores nostrum."
                 image={todoList}
                 link={todolistLink}
+                features={[
+                  { id: 1, text: 'authorization' },
+                  { id: 2, text: 'creating, editing, deleting lists and tasks' },
+                  { id: 3, text: 'filtering tasks based on their status' },
+                ]}
               />
               <Project
                 title="SOCIAL NETWORK"
-                description="Lorem ipsum dolor sit amet, consectetur adipisicing elit"
                 image={socialNetwork}
                 link={socialNetworkLink}
+                features={[
+                  { id: 1, text: 'authorization' },
+                  { id: 2, text: 'profile editing' },
+                  { id: 3, text: 'navigating through user pages' },
+                  { id: 4, text: 'subscribing and unsubscribing from users' },
+                  { id: 5, text: 'adding posts' },
+                  { id: 6, text: 'pagination' },
+                ]}
               />
               <Project
                 title="QUESTION CARDS"
-                description="dignissimos dolor eos ex itaque iusto magnam maiores nostrum."
                 image={questionCards}
                 link={questionCardsLink}
+                features={[
+                  { id: 1, text: 'authorization' },
+                  { id: 2, text: 'password recovery' },
+                  { id: 3, text: 'creating, editing, deleting packs and cards' },
+                  { id: 4, text: 'packs and cards search and sorting' },
+                  { id: 5, text: 'answering cards questions, grading their difficulty' },
+                  {
+                    id: 6,
+                    text: 'displaying questions randomly depending on their grade',
+                  },
+                  { id: 7, text: 'pagination' },
+                ]}
               />
             </div>
           </Fade>
