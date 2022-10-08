@@ -2,7 +2,6 @@
 @import '../../common/styles/sass/mixins';
 
 .container {
-  //border: 1px solid red;
   margin-top: 30px;
   padding: 0 15px;
   display: flex;
@@ -28,8 +27,7 @@
   }
 
   .project {
-    //border: 1px solid white;
-    background-color: $elementBgColor;
+    background: linear-gradient(145deg, #1e2024, #23272b);
     border-radius: 20px;
     box-shadow: 10px 10px 19px #1c1e22, -10px -10px 19px #262a2e;
     height: 100%;
@@ -41,8 +39,16 @@
       padding: 20px;
     }
 
+    &::before {
+      @include hoveredElement(20px);
+    }
+
     &:hover {
-      background-color: $elementHoveredBgColor;
+      transform: translateY(0);
+
+      &::before {
+        opacity: 1;
+      }
 
       img {
         transform: scale(1.1);
@@ -50,12 +56,10 @@
     }
 
     .imageWrapper {
-      //border: 1px solid white;
       overflow: hidden;
       border-radius: 10px;
 
       .image {
-        //border: 1px solid white;
         display: block;
         width: 100%;
         transition: $transition;
@@ -78,10 +82,7 @@
         transition: $transition;
         filter: blur(0);
         @include fontFamily($fontSecondary, 600);
-        @include fontSize(20px, 30px);
-        @media (min-width: 480px) {
-          @include fontSize(16px, 16px);
-        }
+        @include fontSize(16px, 16px);
 
         &:hover {
           color: $colorPrimary;

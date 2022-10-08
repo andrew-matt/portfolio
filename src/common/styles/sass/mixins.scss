@@ -1,3 +1,5 @@
+@import './src/common/styles/sass/variables';
+
 @mixin fontFamily($fontFamily, $fontWeight) {
   font-family: $fontFamily;
   font-weight: $fontWeight;
@@ -42,11 +44,25 @@
   border: 2px solid #191b1e;
   border-radius: 6px;
   font-family: 'Montserrat', sans-serif;
-  color: #c4cfde;
+  color: $textColor;
   font-size: 14px;
   letter-spacing: 1px;
   opacity: .9;
-  transition: 0.4s;
+  transition: $transition;
+}
+
+@mixin hoveredElement($borderRadius) {
+  position: absolute;
+  background: linear-gradient(to right bottom, $bgColor, #16181c);
+  border-radius: $borderRadius;
+  content: "";
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  z-index: -1;
+  transition: $transition;
 }
 
 @mixin bottomLine() {

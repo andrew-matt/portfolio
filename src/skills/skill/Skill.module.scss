@@ -2,7 +2,6 @@
 @import './src/common/styles/sass/mixins';
 
 .container {
-  //border: 1px solid red;
   margin-top: 30px;
   padding: 0 15px;
   @media (min-width: 576px) {
@@ -23,8 +22,8 @@
   }
 
   .skill {
-    //border: 1px solid white;
-    background-color: $elementBgColor;
+    position: relative;
+    background: linear-gradient(145deg, #1e2024, #23272b);
     border-radius: 10px;
     box-shadow: 10px 10px 19px #1c1e22, -10px -10px 19px #262a2e;
     height: 100%;
@@ -38,9 +37,17 @@
       padding: 50px;
     }
 
+    &::before {
+      @include hoveredElement(10px);
+    }
+
     &:hover {
-      background-color: $elementHoveredBgColor;
       color: white;
+      transform: translateY(0);
+
+      &::before {
+        opacity: 1;
+      }
     }
 
     .icon {
