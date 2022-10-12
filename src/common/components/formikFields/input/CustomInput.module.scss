@@ -1,0 +1,19 @@
+@import './src/common/styles/sass/mixins';
+
+.input {
+  @include input();
+
+  &:focus {
+    outline: 2px solid #ff014f;
+    box-shadow: none;
+    color: #e4e6ea;
+  }
+}
+
+.error {
+  text-align: start;
+  color: red;
+  @include fontFamily($fontPrimary, 400);
+  font-size: 18px;
+  filter: blur(0);
+}

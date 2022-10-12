@@ -1,0 +1,23 @@
+@import '../../common/styles/sass/mixins';
+
+.projectsBlock {
+  //border: 1px solid red;
+  padding: 100px 0 100px 0;
+  position: relative;
+
+  .container {
+    //border: 1px solid;
+    @include container();
+    text-align: center;
+
+    .projects {
+      //border: 1px solid;
+      @include flex(row, center, normal, wrap);
+    }
+  }
+
+  &::after {
+    @include bottomLine();
+  }
+}
+

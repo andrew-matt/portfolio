@@ -1,0 +1,25 @@
+@import '../../common/styles/sass/variables';
+@import '../../common/styles/sass/mixins';
+
+.footerBlock {
+  //border: 1px solid red;
+  padding: 100px 0 100px 0;
+
+  .footerContainer {
+    //border: 1px solid;
+    @include container();
+    @include flex(column, space-around, center, wrap);
+
+    .title {
+      margin-bottom: 10px;
+    }
+
+    .copyright {
+      padding: 5px 10px;
+      margin-top: 10px;
+      color: #878e99;
+      font-family: $fontPrimary;
+      font-size: 17px;
+    }
+  }
+}

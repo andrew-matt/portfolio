@@ -1,0 +1,93 @@
+@import '../../../common/styles/sass/variables';
+@import '../../../common/styles/sass/mixins';
+
+.container {
+  margin-top: 30px;
+  padding: 0 15px;
+  display: flex;
+  @media (min-width: 576px) {
+    max-width: 100%;
+  }
+  @media (min-width: 768px) {
+    max-width: 50%;
+  }
+  @media (min-width: 992px) {
+    margin-top: 50px;
+  }
+  @media (min-width: 1200px) {
+    max-width: 33.333333%;
+  }
+  @media (min-width: 1600px) {
+    padding: 0 25px;
+  }
+
+  .link {
+    text-decoration: none;
+    color: $textColor;
+  }
+
+  .project {
+    background: linear-gradient(145deg, #1e2024, #23272b);
+    border-radius: 20px;
+    box-shadow: 10px 10px 19px #1c1e22, -10px -10px 19px #262a2e;
+    height: 100%;
+    padding: 30px;
+    text-align: left;
+    transition: $transition;
+    cursor: pointer;
+    @media (max-width: 479px) {
+      padding: 20px;
+    }
+
+    &::before {
+      @include hoveredElement(20px);
+    }
+
+    &:hover {
+      transform: translateY(0);
+
+      &::before {
+        opacity: 1;
+      }
+
+      img {
+        transform: scale(1.1);
+      }
+    }
+
+    .imageWrapper {
+      overflow: hidden;
+      border-radius: 10px;
+
+      .image {
+        display: block;
+        width: 100%;
+        transition: $transition;
+      }
+    }
+
+    .content {
+      padding-top: 18px;
+
+      .title {
+        padding-bottom: 10px;
+        color: $colorPrimary;
+        @include fontFamily($fontPrimary, 500);
+        @include fontSize(12px, normal);
+        letter-spacing: 1px;
+        filter: blur(0);
+      }
+
+      .description {
+        transition: $transition;
+        filter: blur(0);
+        @include fontFamily($fontSecondary, 600);
+        @include fontSize(16px, 16px);
+
+        &:hover {
+          color: $colorPrimary;
+        }
+      }
+    }
+  }
+}

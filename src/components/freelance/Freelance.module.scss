@@ -1,0 +1,19 @@
+@import '../../common/styles/sass/variables';
+@import '../../common/styles/sass/mixins';
+
+.block {
+  padding: 100px 0 100px 0;
+  position: relative;
+
+  .container {
+    text-align: center;
+    min-height: 200px;
+    @include container();
+    padding: 0 15px;
+    @include flex(column, space-between, center, wrap);
+  }
+
+  &::after {
+    @include bottomLine();
+  }
+}

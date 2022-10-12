@@ -1,0 +1,22 @@
+@import '../../../common/styles/sass/variables';
+@import '../../../common/styles/sass/mixins';
+
+.form {
+  margin-top: 30px;
+  box-shadow: 10px 10px 19px #1c1e22, -10px -10px 19px #262a2e;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+
+  .title {
+    color: #a0a8b3;
+    @include fontFamily($fontSecondary, 500);
+    @include fontSize(12px, 22px);
+    letter-spacing: 1px;
+    margin-bottom: 14px;
+    text-transform: uppercase;
+  }
+}

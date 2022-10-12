@@ -1,0 +1,99 @@
+@import '../../common/styles/sass/variables';
+@import '../../common/styles/sass/mixins';
+
+.mainBlock {
+  position: relative;
+  padding: 150px 0 100px 0;
+
+  .container {
+    @include container();
+    padding: 0 15px;
+    @include flex(row, center, center, wrap);
+
+    .greeting {
+      order: 2;
+      margin-top: 50px;
+      @media (min-width: 992px) {
+        max-width: 60%;
+        order: 1;
+        margin-top: 0;
+      }
+
+      h1 {
+        color: white;
+        font-family: $fontSecondary;
+        font-weight: 700;
+        margin-bottom: 22px;
+        @media only screen and (max-width: 479px) {
+          @include fontSize(32px, 40px);
+        }
+        @media (min-width: 576px) {
+          @include fontSize(50px, 60px);
+        }
+        @media (min-width: 992px) {
+          @include fontSize(45px, 1.2);
+        }
+        @media (min-width: 1200px) {
+          @include fontSize(60px, 75px);
+        }
+
+        span:nth-child(2) {
+          color: $colorPrimary;
+        }
+
+        div,
+        span:last-child {
+          @media only screen and (max-width: 479px) {
+            font-size: 26px;
+          }
+          @media (min-width: 576px) {
+            font-size: 40px;
+          }
+          @media (min-width: 1200px) {
+            font-size: 45px;
+          }
+          color: white;
+          font-weight: 600;
+        }
+      }
+
+      p {
+        @include fontSize(16px, 30px);
+        opacity: .9;
+        @media (min-width: 992px) {
+          padding-right: 16%;
+        }
+      }
+    }
+
+    .photo {
+      order: 1;
+      background-color: $elementBgColor;
+      transition: $transition;
+      display: flex;
+      overflow: hidden;
+      @media (min-width: 992px) {
+        max-width: 40%;
+        order: 2;
+      }
+
+      img {
+        transition: $transition;
+      }
+
+      &:hover {
+
+        img {
+          transform: scale(1.05);
+        }
+      }
+    }
+  }
+
+  &::after {
+    @include bottomLine();
+  }
+}
+
+
+

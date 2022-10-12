@@ -1,0 +1,16 @@
+@import '../../../common/styles/sass/variables';
+@import '../../../common/styles/sass/mixins';
+
+.formTitle {
+  margin-bottom: 5px;
+}
+
+.formText {
+  margin-bottom: 10px;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
