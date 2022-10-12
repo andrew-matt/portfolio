@@ -3,9 +3,12 @@ import { FC, useEffect, useState } from 'react';
 import style from './Header.module.scss';
 
 import { BurgerNav } from 'burgerNav/BurgerNav';
+import { useAppSelector } from 'common/hooks/hooks';
 import { Nav } from 'nav/Nav';
 
 export const Header: FC = () => {
+  const show = useAppSelector(state => state.modal.show);
+
   const maxScrollPosition = 300;
 
   const [scrollPosition, setScrollPosition] = useState(0);
@@ -22,6 +25,10 @@ export const Header: FC = () => {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
+
+  if (show) {
+    return null;
+  }
 
   return (
     <div id="headerContainer" className={style.headerContainer}>

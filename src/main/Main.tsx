@@ -9,7 +9,7 @@ const Fade = require('react-reveal/Fade');
 
 export const Main: FC = () => {
   const mainDescription =
-    'Eager to develop web applications and software. Intend to grow as a specialist in the field and improve my development skills. Experience in development with React, Redux, TypeScript. Interested in continuous learning. Speak English at an intermediate level.';
+    'Experience in development with React, Redux, TypeScript. Basic knowledge in React Native. Keep improving my skills in this direction and expanding them with new technologies.';
 
   return (
     <Fade bottom>

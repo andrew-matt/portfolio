@@ -64,14 +64,7 @@ export const BurgerNav: FC<BurgerNavPropsType> = ({ showMenu, setShowMenu }) => 
           CONTACT
         </Link>
       </div>
-      <div
-        className={style.burgerButton}
-        onClick={showMenuHandle}
-        onKeyUp={() => {}}
-        tabIndex={0}
-        role="button"
-        aria-label="show menu"
-      >
+      <div className={style.burgerButton} onClick={showMenuHandle} role="presentation">
         <FontAwesomeIcon icon={faBars} color="#ff014f" size="2x" />
       </div>
     </div>

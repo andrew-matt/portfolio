@@ -1,0 +1,50 @@
+@import './src/common/styles/sass/mixins';
+
+.modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+  pointer-events: none;
+
+  .container {
+    @include container();
+    padding: 0 15px;
+    @include flex(column, center, center, wrap);
+    width: 100%;
+
+    .modalContent {
+      transform: scale(0.5);
+      transition: all 0.3s ease-in-out;
+      width: 100%;
+      @media (min-width: 768px) {
+        width: 80%;
+      }
+      @media (min-width: 992px) {
+        width: 60%;
+      }
+      @media (min-width: 1200px) {
+        width: 50%;
+      }
+    }
+  }
+}
+
+.modalShow {
+  opacity: 1;
+  pointer-events: visible;
+
+  .container .modalContent {
+    transform: scale(1);
+  }
+}
+
+
+

@@ -2,6 +2,9 @@ import { FC } from 'react';
 
 import style from './App.module.scss';
 
+import { ContactsForm } from 'common/components/contactsForm/ContactsForm';
+import { Modal } from 'common/components/modal/Modal';
+import { SnackBar } from 'common/components/snackbar/SnackBar';
 import { Contacts } from 'contacts/Contacts';
 import { Footer } from 'footer/Footer';
 import { Freelance } from 'freelance/Freelance';
@@ -20,6 +23,10 @@ export const App: FC = () => {
       <Freelance />
       <Contacts />
       <Footer />
+      <Modal>
+        <ContactsForm />
+      </Modal>
+      <SnackBar />
     </div>
   );
 };
