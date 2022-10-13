@@ -40,7 +40,7 @@ export const sendMessage =
   async dispatch => {
     try {
       dispatch(setSendingMessageStatus(true));
-      await axios.post('https://smtp-nodejs-server-39586.herokuapp.com/sendMessage1', {
+      await axios.post('https://smtp-nodejs-server-39586.herokuapp.com/sendMessage', {
         values,
       });
       dispatch(setOpen(true));

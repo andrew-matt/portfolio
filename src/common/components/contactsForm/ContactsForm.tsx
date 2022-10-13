@@ -30,11 +30,11 @@ export const ContactsForm: FC<ContactsFormPropsType> = ({
     <Formik
       initialValues={initialValues}
       validationSchema={validationSchema}
-      onSubmit={values => {
+      onSubmit={(values, { resetForm }) => {
         try {
           dispatch(sendMessage(values));
         } finally {
-          // formik.resetForm();
+          resetForm();
         }
       }}
     >
