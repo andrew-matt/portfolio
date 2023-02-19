@@ -40,9 +40,13 @@ export const sendMessage =
   async dispatch => {
     try {
       dispatch(setSendingMessageStatus(true));
-      await axios.post('https://smtp-nodejs-server-39586.herokuapp.com/sendMessage', {
-        values,
-      });
+      await axios.post(
+        'https://smtp-nodejs-server-production.up.railway.app/sendMessage',
+        {
+          values,
+        },
+      );
+
       dispatch(setOpen(true));
     } catch (error) {
       handleServerNetworkError(error, dispatch);
